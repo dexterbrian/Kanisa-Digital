@@ -15,11 +15,6 @@ Basically this app would be a Christian alternative of Youtube, Netflix, Medium,
 ## Technologies to be used
 This app's frontend will first be built using HTML, CSS and Javascript (Phase 1) and then later on be built using React (Phase 2). The backend will be built using Ruby on Rails (Phase 3). Eventually, the app will be built using a full stack language or framework (Phase 4), using Nuxt, Next or Laravel (TBD).
 
-## Design Sketch
-Here is the sketch of the home page that I'm aiming to build.
-
-![Design Sketch](assets/design%20sketch.jpeg "Kanisa Digital Design Sketch")
-
 ## User Story
 
 ## Setup and Installation
