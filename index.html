@@ -4,37 +4,88 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
     <link href="style.css" rel="stylesheet">
+
     <title>Kanisa Digital</title>
 </head>
 <body>
     <!--Nav bar-->
     <header>
         <div id="app-name">Kanisa Digital</div>
-        <nav></nav>
+        <nav class="navbar">
+            <a class="navlinks" href="#about-us">About Us</a>
+            <a class="navlinks" href="#contact-us">Contact Us</a>
+        </nav>
     </header>
 
     <!--Hero Section-->
     <div id="hero-section">
-        <div id="hero-text">The App to Replace Them All</div>
-        <div id="hero-image"></div>
+        <div id="hero-text">
+            <div id="main-headline">
+                <strong>The App to Replace Them All</strong>
+            </div>
+            <div id="supporting-headline">So that you can Constantly Abide in the Word and in God's presence. (John 15:4)</div>
+        </div>
+        <div id="call-to-action">
+            <button id="get-started">Get Started</button>
+            <button id="learn-more">Learn More</button>
+        </div>
+        <!-- <div id="hero-image">
+            <img src="assets/cross.jpg" alt="An image of a cross">
+        </div> -->
     </div>
 
     <!--Content Section where a user can Search or filter content by Topics-->
-    <main>
-        <div>
-            <div id="search"></div>
-            <div id="topics"></div>
-            <div id="tabs"></div>
-            <div id="content">
-                <article></article>
-                <article></article>
-                <article></article>
+    <main id="main-content">
+        <div id="content-section">
+            <div id="search-section">
+                <div id="search">
+                    <input id="search-input" type="text" placeholder="Search">
+                    <button id="search-button">Search</button>
+                </div>
+            </div>
+            <!-- <div id="topics"></div> -->
+            <div id="content-area">
+                <div id="tab">
+                    <button class="tablinks active" onclick="handleTabClick(event, 'articles')">Articles</button>
+                    <button class="tablinks" onclick="handleTabClick(event, 'sermons')">Sermons</button>
+                    <button class="tablinks" onclick="handleTabClick(event, 'podcasts')">Podcasts</button>
+                </div>
+                <div id="content">
+                    <article>
+                        <h2>Articles</h2>
+                    </article>
+                    <article>
+                        <h2>Articles</h2>
+                    </article>
+                    <article>
+                        <h2>Articles</h2>
+                    </article>
+                </div>
             </div>
         </div>
     </main>
 
-    <footer></footer>
-    
+    <section id="about-us">
+        <h2>About Us</h2>
+    </section>
+
+    <section id="contact-us">
+        <h2>Contact Us</h2>
+
+        <div>
+            <div class="contact">
+                <a id="profile-link" href="https://github.com/dexterbrian" target="_blank">Github</a>
+                <a id="email-address" href="mailto:brianwaweru627@yahoo.com">Email</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        © Brian Waweru
+    </footer>
+    <script src="index.js" type="text/javascript"></script>
 </body>
 </html>
