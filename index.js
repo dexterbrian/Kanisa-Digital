@@ -1,18 +1,35 @@
-let baseUrl = "https://dummyjson.com/posts";
+let dummyJsonUrl = "https://dummyjson.com/posts";
+let jsonPlaceHolderUrl = "https://jsonplaceholder.typicode.com/photos";
 
 let getContent = async (contentId = "") => {
-    baseUrl = contentId == "" ? baseUrl : baseUrl + `/${contentId}`;
-    const allContent = await fetch(baseUrl)
+    const contentUrl = contentId == "" ? dummyJsonUrl : dummyJsonUrl + `posts/${contentId}`;
+    const imagesUrl = contentId == "" ? jsonPlaceHolderUrl : jsonPlaceHolderUrl + `photos/${contentId}`;
+
+    const content = await fetch(contentUrl)
         .then((response) => response.json())
         .then((json) => {
             console.log("base url");
-            console.log(baseUrl);
+            console.log(imagesUrl);
             console.log("all content");
             console.log(contentId == "" ? json.posts : json);
+            return contentId == "" ? json.posts : json;
+        })
+    ;
+
+    const images = await fetch(imagesUrl)
+        .then((response) => response.json())
+        .then((json) => {
+            console.log("images");
+            console.log(json);
             return json;
         })
     ;
-    return allContent;
+
+    displayContent(content, images);
+    return {
+        content: content,
+        images: images
+    };
 };
 
 window.addEventListener("DOMContentLoaded", (event) => {
@@ -20,15 +37,6 @@ window.addEventListener("DOMContentLoaded", (event) => {
     getContent();
   }
 );
-
-// async function getContent() {
-//     return await fetch(baseUrl)
-//         .then((response) => response.json())
-//         .then((json) => {
-//             return json;
-//         })
-//     ;
-// }
 
 function handleTabClick(event, contentType) {
     let tabcontent, tablinks;
