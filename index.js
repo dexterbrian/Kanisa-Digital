@@ -46,7 +46,6 @@ function displaySermons(images) {
             i++) {
 
             const articleElement = document.createElement("article");
-            //articleElement.className = "tabcontent";
 
             const contentImage = document.createElement("img");
             contentImage.src = images[i].thumbnailUrl;
@@ -75,7 +74,6 @@ function displayArticles(content) {
             i++) {
 
             const articleElement = document.createElement("article");
-            // articleElement.className = "tabcontent";
 
             const titleHeading = document.createElement("h4");
             titleHeading.innerText = content[i].title;
