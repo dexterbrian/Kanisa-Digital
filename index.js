@@ -1,20 +1,35 @@
 let dummyJsonUrl = "https://dummyjson.com/posts";
 let jsonPlaceHolderUrl = "https://jsonplaceholder.typicode.com/photos";
 
-let getContent = async (contentId = "") => {
-    const contentUrl = contentId == "" ? dummyJsonUrl : dummyJsonUrl + `posts/${contentId}`;
-    const imagesUrl = contentId == "" ? jsonPlaceHolderUrl : jsonPlaceHolderUrl + `photos/${contentId}`;
+let getContent = async (id = "") => {
+    const contentUrl = id == "" ? dummyJsonUrl : dummyJsonUrl + `/${id}`;
 
     const content = await fetch(contentUrl)
         .then((response) => response.json())
         .then((json) => {
-            console.log("base url");
-            console.log(imagesUrl);
             console.log("all content");
-            console.log(contentId == "" ? json.posts : json);
-            return contentId == "" ? json.posts : json;
+            console.log(id == "" ? json.posts : json);
+            // Display single post content if id isn't empty
+            return id == "" ? json.posts : json;
         })
     ;
+
+    // const images = await fetch(imagesUrl)
+    //     .then((response) => response.json())
+    //     .then((json) => {
+    //         console.log("images");
+    //         console.log(json);
+    //         return json;
+    //     })
+    // ;
+
+    displayContent(content);
+    return content;
+};
+
+let getImages = async (id = "") => {
+
+    const imagesUrl = id == "" ? jsonPlaceHolderUrl : jsonPlaceHolderUrl + `/${id}`;
 
     const images = await fetch(imagesUrl)
         .then((response) => response.json())
@@ -25,11 +40,7 @@ let getContent = async (contentId = "") => {
         })
     ;
 
-    displayContent(content, images);
-    return {
-        content: content,
-        images: images
-    };
+    return images;
 };
 
 function displayContent(content) {
