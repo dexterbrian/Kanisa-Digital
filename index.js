@@ -79,6 +79,7 @@ function displayArticles(content) {
             titleHeading.innerText = content[i].title;
 
             const bodyParagraph = document.createElement("p");
+            // Displaying a short excerpt instead of the full text
             bodyParagraph.innerText = content[i].body.slice(0, 300) + "...";
 
             const readMoreButton = document.createElement("button");
