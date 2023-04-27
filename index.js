@@ -23,7 +23,7 @@ let getContent = async (id = "") => {
     //     })
     // ;
 
-    displayContent(content);
+    displayArticles(content);
     return content;
 };
 
@@ -43,42 +43,18 @@ let getImages = async (id = "") => {
     return images;
 };
 
-function displayContent(content) {
+function displayArticles(content) {
 
     const contentDiv = document.getElementById("content");
 
     // Check if content is an array
     if (Array.isArray(content)) {
 
-        // content.forEach(content => {
-
-        //     const titleHeading = document.createElement("h2");
-        //     const titleNode = document.createTextNode(content.title);
-        //     titleHeading.appendChild(titleNode);
-
-        //     const contentImage = document.createElement("img");
-        //     contentImage.src = 
-        //     const bodyNode = document.createTextNode(content.body);
-        //     contentImage.appendChild(bodyNode);
-
-            // const bodyParagraph = document.createElement("p");
-            // const bodyNode = document.createTextNode(content.body);
-            // bodyParagraph.appendChild(bodyNode);
-
-        //     articleElement.appendChild(titleHeading);
-        //     articleElement.appendChild(bodyParagraph);
-
-        //     contentDiv.appendChild(articleElement);
-        // });
-
         for(let i = 0; 
             i <= 5; // Limited content displayed to only 6
             i++) {
 
             const articleElement = document.createElement("article");
-
-            // const contentImage = document.createElement("img");
-            // contentImage.src = images[i].thumbnailUrl;
 
             const titleHeading = document.createElement("h4");
             titleHeading.innerText = content[i].title;
@@ -96,10 +72,6 @@ function displayContent(content) {
             contentDiv.appendChild(articleElement);
         }
     }
-
-    // Get the content div
-
-    // If content is an array, loop through it and create h2 and p tags for the content title and body
 }
 
 window.addEventListener("DOMContentLoaded", (event) => {
