@@ -32,7 +32,7 @@ let getContent = async (contentId = "") => {
     };
 };
 
-function displayContent(content, images) {
+function displayContent(content) {
 
     const contentDiv = document.getElementById("content");
 
@@ -50,9 +50,9 @@ function displayContent(content, images) {
         //     const bodyNode = document.createTextNode(content.body);
         //     contentImage.appendChild(bodyNode);
 
-        //     // const bodyParagraph = document.createElement("p");
-        //     // const bodyNode = document.createTextNode(content.body);
-        //     // bodyParagraph.appendChild(bodyNode);
+            // const bodyParagraph = document.createElement("p");
+            // const bodyNode = document.createTextNode(content.body);
+            // bodyParagraph.appendChild(bodyNode);
 
         //     articleElement.appendChild(titleHeading);
         //     articleElement.appendChild(bodyParagraph);
@@ -60,19 +60,27 @@ function displayContent(content, images) {
         //     contentDiv.appendChild(articleElement);
         // });
 
-        for(let i = 0; i <= content.length - 1; i++) {
+        for(let i = 0; 
+            i <= 5; // Limited content displayed to only 6
+            i++) {
 
             const articleElement = document.createElement("article");
 
-            const contentImage = document.createElement("img");
-            contentImage.src = images[i].thumbnailUrl;
+            // const contentImage = document.createElement("img");
+            // contentImage.src = images[i].thumbnailUrl;
 
             const titleHeading = document.createElement("h4");
-            const titleNode = document.createTextNode(content[i].title);
-            titleHeading.appendChild(titleNode);
+            titleHeading.innerText = content[i].title;
+
+            const bodyParagraph = document.createElement("p");
+            bodyParagraph.innerText = content[i].body.slice(0, 300) + "...";
+
+            const readMoreButton = document.createElement("button");
+            readMoreButton.innerText = "Read More";
 
             articleElement.appendChild(titleHeading);
-            articleElement.appendChild(contentImage);
+            articleElement.appendChild(bodyParagraph);
+            articleElement.appendChild(readMoreButton);
 
             contentDiv.appendChild(articleElement);
         }
