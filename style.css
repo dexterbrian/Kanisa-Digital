@@ -63,6 +63,31 @@ nav {
     align-items: center;
 }
 
+#call-to-action {
+    display: flex;
+    flex-direction: row;
+}
+
+#call-to-action #get-started {
+    background-color: #e9e9ed;
+    border-color: #8f8f9d;
+    border-width: 1px;
+    border-radius: 10px;
+    font-size: larger;
+    padding: 10px 20px 10px 20px;
+    margin-right: 20px;
+    margin-top: 40px;
+    cursor: pointer;
+}
+
+#call-to-action #learn-more {
+    font-size: larger;
+    cursor: pointer;
+    padding: 10px 20px 10px 20px;
+    margin-left: 20px;
+    margin-top: 40px;
+}
+
 #main-headline {
     font-size: xxx-large;
 }
