@@ -1,6 +1,10 @@
 let dummyJsonUrl = "https://dummyjson.com/posts";
 let jsonPlaceHolderUrl = "https://jsonplaceholder.typicode.com/photos";
 
+let images, articles;
+
+const contentDiv = document.getElementById("content");
+
 let getContent = async (id = "") => {
     const contentUrl = id == "" ? dummyJsonUrl : dummyJsonUrl + `/${id}`;
 
@@ -14,15 +18,7 @@ let getContent = async (id = "") => {
         })
     ;
 
-    // const images = await fetch(imagesUrl)
-    //     .then((response) => response.json())
-    //     .then((json) => {
-    //         console.log("images");
-    //         console.log(json);
-    //         return json;
-    //     })
-    // ;
-
+    articles = content;
     displayArticles(content);
     return content;
 };
@@ -31,17 +27,44 @@ let getImages = async (id = "") => {
 
     const imagesUrl = id == "" ? jsonPlaceHolderUrl : jsonPlaceHolderUrl + `/${id}`;
 
-    const images = await fetch(imagesUrl)
+    const allImages = await fetch(imagesUrl)
         .then((response) => response.json())
         .then((json) => {
-            console.log("images");
-            console.log(json);
             return json;
         })
     ;
-
-    return images;
+    images = allImages;
+    return allImages;
 };
+
+function displaySermons(images) {
+
+    if (Array.isArray(images)) {
+
+        for(let i = 0; 
+            i <= 5; // Limited content displayed to only 6
+            i++) {
+
+            const articleElement = document.createElement("article");
+            //articleElement.className = "tabcontent";
+
+            const contentImage = document.createElement("img");
+            contentImage.src = images[i].thumbnailUrl;
+
+            const titleHeading = document.createElement("h4");
+            titleHeading.innerText = images[i].title;
+
+            const readMoreButton = document.createElement("button");
+            readMoreButton.innerText = "Watch";
+
+            articleElement.appendChild(contentImage);
+            articleElement.appendChild(titleHeading);
+            articleElement.appendChild(readMoreButton);
+
+            contentDiv.appendChild(articleElement);
+        }
+    }
+}
 
 function displayArticles(content) {
 
