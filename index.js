@@ -102,12 +102,10 @@ window.addEventListener("DOMContentLoaded", (event) => {
 );
 
 function handleTabClick(event, contentType) {
-    let tabcontent, tablinks;
   
     // This is to clear the previous clicked content.
-    tabcontent = document.getElementsByClassName("tabcontent");
-    for (let i = 0; i < tabcontent.length; i++) {
-      tabcontent[i].style.display = "none";
+    while (contentDiv.hasChildNodes()) {
+        contentDiv.removeChild(contentDiv.firstChild);
     }
   
     // Set the tab to be "active".
@@ -115,8 +113,17 @@ function handleTabClick(event, contentType) {
     for (i = 0; i < tablinks.length; i++) {
       tablinks[i].className = tablinks[i].className.replace(" active", "");
     }
-  
+
+    switch (contentType) {
+        case 'sermons':
+            displaySermons(images);
+        break;
+
+        case 'articles':
+            displayArticles(articles);
+        break;
+    }
+
     // Display the clicked tab and set it to active.
-    document.getElementById(contentType).style.display = "block";
     event.currentTarget.className += " active";
   }
