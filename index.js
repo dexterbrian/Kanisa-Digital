@@ -96,8 +96,8 @@ function displayArticles(content) {
 }
 
 window.addEventListener("DOMContentLoaded", (event) => {
-    console.log("DOM fully loaded and parsed");
     getContent();
+    getImages();
   }
 );
 
