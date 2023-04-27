@@ -20,8 +20,13 @@
     padding: 15px;
 }
 
-.navlinks {
-    margin-left: 50px;
+#supporting-headline, #about-us p, #contact-us a {
+    font-size: larger;
+}
+
+#about-us h2, #contact-us h2 {
+    font-size: xx-large;
+    margin-bottom: 50px;
 }
 
 /* Nav bar */
@@ -32,6 +37,10 @@ header {
     position: fixed;
     top: 0;
     left: 0;
+}
+
+.navlinks {
+    margin-left: 50px;
 }
 
 a {
@@ -56,10 +65,6 @@ nav {
 
 #main-headline {
     font-size: xxx-large;
-}
-
-#supporting-headline {
-    font-size: larger;
 }
 
 /* Content Section */
@@ -112,10 +117,6 @@ article {
 
 
 /* Contact us */
-
-#contact-us h2 {
-    margin-bottom: 50px;
-}
 
 #contact-us a {
     margin: 50px;
