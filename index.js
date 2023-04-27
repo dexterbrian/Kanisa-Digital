@@ -68,9 +68,6 @@ function displaySermons(images) {
 
 function displayArticles(content) {
 
-    const contentDiv = document.getElementById("content");
-
-    // Check if content is an array
     if (Array.isArray(content)) {
 
         for(let i = 0; 
@@ -78,6 +75,7 @@ function displayArticles(content) {
             i++) {
 
             const articleElement = document.createElement("article");
+            // articleElement.className = "tabcontent";
 
             const titleHeading = document.createElement("h4");
             titleHeading.innerText = content[i].title;
