@@ -11,8 +11,9 @@ let getContent = async (id = "") => {
     const content = await fetch(contentUrl)
         .then((response) => response.json())
         .then((json) => {
-            console.log("all content");
-            console.log(id == "" ? json.posts : json);
+            // console.log("all content");
+            // console.log(id == "" ? json.posts : json);
+
             // Display single post content if id isn't empty
             return id == "" ? json.posts : json;
         })
