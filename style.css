@@ -147,7 +147,9 @@ article {
 }
 
 /* About us */
-
+#about-us p {
+    padding: 20px;
+}
 
 /* Contact us */
 
