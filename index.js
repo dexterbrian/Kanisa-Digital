@@ -4,6 +4,16 @@ let jsonPlaceHolderUrl = "https://jsonplaceholder.typicode.com/photos";
 let images, articles;
 
 const contentDiv = document.getElementById("content");
+const dialog = document.getElementById("dialog");
+const dialogContent = document.getElementById("dialog-content");
+const cancelButton = document.getElementById("cancel");
+cancelButton.addEventListener("click", () => {
+
+    while(dialogContent.hasChildNodes()) {
+        dialogContent.removeChild(dialogContent.children[0]);
+    }
+    dialog.close();
+});
 
 let getContent = async (id = "") => {
     const contentUrl = id == "" ? dummyJsonUrl : dummyJsonUrl + `/${id}`;
@@ -54,12 +64,24 @@ function displaySermons(images) {
             const titleHeading = document.createElement("h4");
             titleHeading.innerText = images[i].title;
 
-            const readMoreButton = document.createElement("button");
-            readMoreButton.innerText = "Watch";
+            const watchButton = document.createElement("button");
+            watchButton.innerText = "Watch";
+            watchButton.addEventListener("click", () => {
+
+                const content = document.createElement("img");
+                content.src = images[i].thumbnailUrl;
+
+                const title = document.createElement("h4");
+                title.innerText = images[i].title;
+
+                dialogContent.appendChild(content);
+                dialogContent.appendChild(title);
+                dialog.showModal();
+            });
 
             articleElement.appendChild(contentImage);
             articleElement.appendChild(titleHeading);
-            articleElement.appendChild(readMoreButton);
+            articleElement.appendChild(watchButton);
 
             contentDiv.appendChild(articleElement);
         }
@@ -85,6 +107,18 @@ function displayArticles(content) {
 
             const readMoreButton = document.createElement("button");
             readMoreButton.innerText = "Read More";
+            readMoreButton.addEventListener("click", () => {
+                const title = document.createElement("h4");
+                title.innerText = content[i].title;
+
+                const body = document.createElement("p");
+                // Displaying a short excerpt instead of the full text
+                body.innerText = content[i].body.slice(0, 300) + "...";
+
+                dialogContent.appendChild(title);
+                dialogContent.appendChild(body);
+                dialog.showModal();
+            });
 
             articleElement.appendChild(titleHeading);
             articleElement.appendChild(bodyParagraph);
@@ -126,4 +160,4 @@ function handleTabClick(event, contentType) {
 
     // Display the clicked tab and set it to active.
     event.currentTarget.className += " active";
-  }
+}
