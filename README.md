@@ -10,6 +10,8 @@ A web app where Christians can access Christian content such as:
 
 Basically this app would be a Christian alternative of Youtube, Netflix, Medium, Audible and Spotify all rolled into one.
 
+>Please note that this app is currently an MVP for illustration purposes.
+
 ## Author
 Developed by Brian Waweru.
 
