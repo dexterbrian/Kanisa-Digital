@@ -41,5 +41,7 @@ No known bugs.
 If you have any question or contributions, please email me at [brianwaweru627@yahoo.com](mailto:brianwaweru627@yahoo.com).
 
 ## License
-I don't know which license to pick yet but basically contributions to the project are allowed. What isn't allowed is you using the code in this repo to start your own related or unrelated project without consent.
+The appropriate license is yet to be selected. Contributions to the project are allowed, however using the code in this repo to start your own related or unrelated project without consent is not allowed.
+
+>Copyright (c) 2022 **Brian Waweru**
 
