@@ -16,7 +16,7 @@ Developed by Brian Waweru.
 ## Live Link
 Click [here](https://dexterbrian.github.io/Kanisa-Digital/) to view the app.
 
-## Technologies to be used
+## Technologies used
 This app's frontend will first be built using HTML, CSS and Javascript (Phase 1) and then later on be built using React (Phase 2). The backend will be built using Ruby on Rails (Phase 3). Eventually, the app will be built using a full stack language or framework (Phase 4), using Nuxt, Next or Laravel (TBD).
 
 ## User Story
@@ -43,5 +43,5 @@ If you have any question or contributions, please email me at [brianwaweru627@ya
 ## License
 The appropriate license is yet to be selected. Contributions to the project are allowed, however using the code in this repo to start your own related or unrelated project without consent is not allowed.
 
->Copyright (c) 2022 **Brian Waweru**
+>Copyright (c) 2023 **Brian Waweru**
 
