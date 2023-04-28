@@ -113,7 +113,7 @@ function displayArticles(content) {
 
                 const body = document.createElement("p");
                 // Displaying a short excerpt instead of the full text
-                body.innerText = content[i].body.slice(0, 300) + "...";
+                body.innerText = content[i].body;
 
                 dialogContent.appendChild(title);
                 dialogContent.appendChild(body);
