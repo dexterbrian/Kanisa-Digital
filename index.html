@@ -1,88 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
-    <link href="style.css" rel="stylesheet">
-
-    <title>Kanisa Digital</title>
-</head>
-<body>
-    <!--Nav bar-->
-    <header>
-        <div id="app-name"><strong><a href="#">Kanisa Digital</a></strong></div>
-        <nav class="navbar">
-            <a class="navlinks" href="#about-us">About Us</a>
-            <a class="navlinks" href="#contact-us">Contact Us</a>
-        </nav>
-    </header>
-
-    <!--Hero Section-->
-    <div id="hero-section">
-        <div id="hero-text">
-            <div id="main-headline">
-                <strong>The App to Replace Them All</strong>
-            </div>
-            <div id="supporting-headline">So that you can Constantly Abide in the Word and in God's presence. (John 15:4)</div>
-        </div>
-        <div id="call-to-action">
-            <div id="get-started"><a href="#main-content">Get Started</a></div>
-            <div id="learn-more"><a href="#about-us">Learn More</a></div>
-        </div>
-        <!-- <div id="hero-image">
-            <img src="assets/cross.jpg" alt="An image of a cross">
-        </div> -->
-    </div>
-
-    <!--Content Section where a user can Search or filter content by Topics-->
-    <main id="main-content">
-        <div id="content-section">
-            <div id="search-section">
-                <div id="search">
-                    <input id="search-input" type="text" placeholder="Search">
-                    <button id="search-button">Search</button>
-                </div>
-            </div>
-            <!-- <div id="topics"></div> -->
-            <div id="content-area">
-                <div id="tab">
-                    <button class="tablinks active" onclick="handleTabClick(event, 'articles')">Articles</button>
-                    <button class="tablinks" onclick="handleTabClick(event, 'sermons')">Sermons</button>
-                    <button class="tablinks" onclick="handleTabClick(event, 'podcasts')">Podcasts</button>
-                </div>
-                <div id="content">
-                </div>
-            </div>
-        </div>
-    </main>
-
-    <dialog id="dialog">
-        <div id="dialog-content"></div>
-        <button id="cancel">Cancel</button>
-    </dialog>
-
-    <section id="about-us">
-        <h2>About Us</h2>
-        <p>Kanisa Digital exists to provide alternative software solutions to modern day Christians who are forced to rely on apps from the secular world which, while useful and beneficial, can become a channel for bad content or even cause Christians to sin. The Bible instructs us to guard our hearts and to cut off anything that leads us to sin, and it was with this in mind that Kanisa Digital was born.</p>
-    </section>
-
-    <section id="contact-us">
-        <h2>Contact Us</h2>
-
-        <div>
-            <div class="contact">
-                <a id="profile-link" href="https://github.com/dexterbrian" target="_blank">Github</a>
-                <a id="email-address" href="mailto:brianwaweru627@yahoo.com">Email</a>
-            </div>
-        </div>
-    </section>
-
-    <footer>
-        © Brian Waweru
-    </footer>
-    <script src="index.js" type="text/javascript"></script>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite + React</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
 </html>

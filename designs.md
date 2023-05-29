@@ -1,0 +1,12 @@
+# Home Page Component Page
+- Nav bar
+  - App Title
+  - About Us
+  - Contact Us
+- Hero Section
+  - Hero text
+  - Sub-headline
+  - Hero Image
+  - Call To Action Buttons
+    - Get Started
+    - Learn More
