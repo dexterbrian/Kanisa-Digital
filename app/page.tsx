@@ -1,7 +1,12 @@
 import Image from "next/image";
+import ContentCard from "./components/ContentCard";
+import NavBar from "./components/NavBar";
 
 export default function Home() {
   return (
-    <main><h1>Hello World</h1></main>
+    <main>
+      <NavBar />
+      <ContentCard />
+    </main>
   );
 }
