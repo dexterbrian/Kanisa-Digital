@@ -13,7 +13,7 @@ interface ContentCardProps {
 const ContentCard: React.FC<ContentCardProps> = ({ content, category, numberOfContent }) => {
   return (
     <div id={`slide${content.id}`} className="carousel-item relative w-full h-screen bg-cover bg-center bg-no-repeat" style={{ backgroundImage: 'url(https://img.daisyui.com/images/stock/photo-1625726411847-8cbb60cc71e6.webp)' }}>
-      <div className='flex flex-col'>
+      <div className='flex flex-col w-full'>
           {content.categoryId === 1 ? <NavBar /> : null} 
           <h1 className='text-3xl font-bold'>{category.name}</h1>
       </div>
