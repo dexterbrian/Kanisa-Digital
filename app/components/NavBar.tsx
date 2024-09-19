@@ -3,12 +3,16 @@ import SearchInput from './SearchInput'
 
 const NavBar = () => {
   return (
-    <div id="navBar" className='mb-6 flex flex-row justify-between'>
-        <div>
-            <h1 id="appTitle" className='text-5xl'><strong>Kanisa Digital</strong></h1>
-            <p id='appSubtitle' className='text-sm'>The App for Christians. (John 15:4)</p>
+    <div className="navbar flex-row justify-between">
+      <div className="flex flex-col">
+        <a className="btn btn-ghost text-5xl">Kanisa Digital</a>
+        <p id='appSubtitle' className='text-sm'>The App for Christians. (John 15:4)</p>
+      </div>
+      <div className="flex-none gap-2">
+        <div className="form-control">
+          <input type="text" placeholder="Search" className="input input-bordered w-24 md:w-auto" />
         </div>
-        <SearchInput />
+      </div>
     </div>
   )
 }

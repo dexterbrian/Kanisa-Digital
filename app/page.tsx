@@ -4,7 +4,8 @@ import ContentCard from "./components/ContentCard";
 
 export interface Content {
   id: number,
-  title: string
+  title: string,
+  categoryId: number
 }
 
 export interface Category {
